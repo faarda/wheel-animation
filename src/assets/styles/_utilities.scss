@@ -1,0 +1,29 @@
+.text {
+  color: $black;
+  font-weight: 400;
+  font-size: 0.75rem;
+
+  &--md{
+    font-size: 1rem;
+  }
+
+  &--primary{
+    color: $primary;
+  }
+
+  &--bold{
+    font-weight: 700;
+  }
+
+  &--medium{
+    font-weight: 500;
+  }
+}
+
+
+//paddings
+
+.px-15{
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+}

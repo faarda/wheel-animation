@@ -1,0 +1,18 @@
+// COLORS
+$primary: #FA7F1F;
+$black: #000000;
+$grey: #F3F3F3;
+$grey-shadow: #F2F2F2;
+$grey-dark: #C4C4C4;
+$white: #FFFFFF;
+
+// BREAKPOINTS
+$BREAKPOINT-LG: 998px;
+
+
+//MIXINS
+@mixin large {
+  @media screen and (min-width: $BREAKPOINT-LG) {
+    @content;
+  }
+}
