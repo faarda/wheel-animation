@@ -23,8 +23,8 @@ const FeatureCard: React.FC<FeatureCardProps> = (props) => {
       </div>
       <ul className="feature-card__benefits">
         {benefits.map((value, index) => (
-          <li>
-            <TextEl key={index}>{value}</TextEl>
+          <li key={index}>
+            <TextEl>{value}</TextEl>
           </li>
         ))}
       </ul>
