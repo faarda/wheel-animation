@@ -52,10 +52,10 @@ const WheelSystem: React.FC<WheelSystemProps> = (props) => {
                 <FeatureBtn
                   {...feature.btn}
                   isActive={btnIsActive(feature.key)}
-                  buttonWidth={BUTTON_WIDTH}
                   showDescBefore={showTextBefore(feature.key)}
                   key={feature.key}
                   onClick={() => setActiveFeature(feature.key)}
+                  data-testid={`wheel-btn-${feature.key}`}
                 />
               ))}
             </div>
@@ -66,7 +66,12 @@ const WheelSystem: React.FC<WheelSystemProps> = (props) => {
         {[...features]
           .sort((a, b) => a.circleIndex - b.circleIndex)
           .map((feature, index) => (
-            <FeatureCard {...feature.card} isActive={activeFeature === feature.key} key={feature.key} />
+            <FeatureCard
+              {...feature.card}
+              isActive={activeFeature === feature.key}
+              key={feature.key}
+              data-testid={`feature-card-${feature.key}`}
+            />
           ))}
       </div>
     </div>

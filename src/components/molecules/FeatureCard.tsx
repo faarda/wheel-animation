@@ -4,19 +4,20 @@ import Icons from "../atoms/Icons";
 import TextEl from "../atoms/Text";
 import cx from "classnames";
 
-export interface FeatureCardProps {
+export interface FeatureCardProps extends React.HTMLProps<HTMLDivElement> {
   icon: IconType;
   iconLabel: string;
   advantage: string;
   benefits: [string, string];
   isActive: boolean;
+  // testId?: string;
 }
 
 const FeatureCard: React.FC<FeatureCardProps> = (props) => {
-  const { icon, advantage, benefits, isActive, iconLabel } = props;
+  const { icon, advantage, benefits, isActive, iconLabel, ...otherProps } = props;
 
   return (
-    <article className={cx("feature-card", { "feature-card--active": isActive })}>
+    <article {...otherProps} className={cx("feature-card", { "feature-card--active": isActive })}>
       <div className="feature-card__inner">
         <Icons color="primary" type={icon} className="feature-card__icon" label={iconLabel} />
         <TextEl className="feature-card__text">{advantage}</TextEl>

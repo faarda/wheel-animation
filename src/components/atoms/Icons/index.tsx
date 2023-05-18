@@ -1,13 +1,16 @@
 import React from "react";
 import cx from "classnames";
-import CameraIcon from "@/assets/svg/camera.svg";
-import DeviceIcon from "@/assets/svg/device.svg";
-import NavigationIcon from "@/assets/svg/navigation.svg";
-import NoiseCancelIcon from "@/assets/svg/noise-cancel.svg";
-import ShutterIcon from "@/assets/svg/shutter.svg";
-import SoundIcon from "@/assets/svg/sound.svg";
-import TravelIcon from "@/assets/svg/travel.svg";
-import WaterDropIcon from "@/assets/svg/water-drop.svg";
+
+import {
+  CameraIcon,
+  NavigationIcon,
+  NoiseCancellationIcon,
+  TravelIcon,
+  DeviceIcon,
+  SoundIcon,
+  WaterDropIcon,
+  ShutterIcon,
+} from "./SolidIcons";
 
 export interface IconProps {
   type: IconType;
@@ -26,6 +29,7 @@ const Icons: React.FC<IconProps> = (props) => {
       aria-label={label}
       className={cx(className, iconColorMap[color ?? "primary"])}
       style={{ width: `${width}px`, height: `${height}px`, ...style }}
+      role="img"
     >
       {iconTypeMap[type]}
     </figure>
@@ -47,7 +51,7 @@ const iconTypeMap = {
   [IconType.CAMERA]: CameraIcon(),
   [IconType.DEVICE]: DeviceIcon(),
   [IconType.NAVIGATION]: NavigationIcon(),
-  [IconType.NOISE_CANCELLATION]: NoiseCancelIcon(),
+  [IconType.NOISE_CANCELLATION]: NoiseCancellationIcon(),
   [IconType.SHUTTER]: ShutterIcon(),
   [IconType.SOUND]: SoundIcon(),
   [IconType.TRAVEL]: TravelIcon(),

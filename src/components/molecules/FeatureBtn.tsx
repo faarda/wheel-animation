@@ -28,12 +28,6 @@ const FeatureBtn: React.FC<FeatureBtnProps> = (props) => {
     ...extraProps
   } = props;
 
-  // useEffect(() => {
-  //   const button = document.querySelectorAll('.feature-btn');
-
-  //   button.forEach((b) => addEventListener)
-  // },[]);
-
   const handleBtnClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     const wheel = document.querySelector(".wheel");
     wheel?.classList.add("hide-descriptions");
@@ -48,7 +42,7 @@ const FeatureBtn: React.FC<FeatureBtnProps> = (props) => {
   };
 
   return (
-    <button aria-label={label} className="feature-btn" onClick={handleBtnClick} {...extraProps}>
+    <button aria-label={label} className="feature-btn" onClick={handleBtnClick} {...extraProps} role="button">
       <div className={cx("feature-btn__circle", { "feature-btn__circle--inactive": !isActive })}>
         <div className="feature-btn__circle__inner  flex-centered">
           <Icons type={icon} style={{ width: "36%" }} color="white" label={iconLabel} />

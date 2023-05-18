@@ -29,7 +29,7 @@ export interface Feature {
   key: string;
 }
 
-const features: Feature[] = [
+export const features: Feature[] = [
   {
     card: {
       icon: IconType.SHUTTER,
