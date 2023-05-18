@@ -1,29 +1,114 @@
 .text {
-  color: $black;
-  font-weight: 400;
-  font-size: 0.75rem;
+  font-size: 1.2rem;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 500;
 
-  &--md{
-    font-size: 1rem;
+  &--sm {
+    font-size: 1.2rem;
   }
 
-  &--primary{
-    color: $primary;
+  &--md {
+    font-size: 1.6rem;
   }
 
-  &--bold{
+  // FONT WEIGHT
+
+  &--bold {
     font-weight: 700;
   }
 
-  &--medium{
+  &--medium {
     font-weight: 500;
+  }
+
+  &--normal {
+    font-weight: 400;
+  }
+
+  // TEXT COLOR
+
+  &--primary {
+    color: $primary;
+  }
+
+  &--white {
+    color: $white;
+  }
+
+  &--black {
+    color: $black;
   }
 }
 
+.inline {
+  display: inline;
+}
 
-//paddings
+.inline-block {
+  display: inline-block;
+}
 
-.px-15{
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.block {
+  display: block;
+}
+
+.grid {
+  display: grid;
+}
+
+.flex-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between-centered {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bg {
+  &--white {
+    color: $white;
+  }
+
+  &--black {
+    background-color: $black;
+  }
+
+  &--primary {
+    background-color: $primary;
+  }
+}
+
+//sizings
+
+.h-screen {
+  height: 100vh;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.h-500 {
+  height: 400px;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.px-15 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
